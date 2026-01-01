@@ -1,0 +1,145 @@
+:root {
+  color-scheme: light;
+  font-family: "Helvetica Neue", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  background: #f4f3f0;
+  color: #2b2a28;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f4f3f0;
+}
+
+.app-header {
+  padding: 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e3e0db;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+h1,
+h2 {
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-button,
+button {
+  padding: 10px 16px;
+  border: 1px solid #d0cbc4;
+  border-radius: 999px;
+  background: #faf9f7;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #f1efe9;
+}
+
+main {
+  max-width: 860px;
+  margin: 24px auto 64px;
+  padding: 0 24px;
+}
+
+.screen {
+  display: grid;
+  gap: 16px;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e3e0db;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+}
+
+textarea,
+select,
+input[type="file"] {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #d8d3cc;
+  font-size: 14px;
+  background: #fff;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.timeline-item {
+  background: #ffffff;
+  border: 1px solid #e3e0db;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.timeline-item button {
+  border-radius: 12px;
+}
+
+.empty-state {
+  color: #7a756f;
+}
+
+.entry-card {
+  background: #ffffff;
+  border: 1px solid #e3e0db;
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.entry-media {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #e3e0db;
+  background: #faf9f7;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+  color: #5c5853;
+}
+
+.back-button {
+  width: fit-content;
+  border-radius: 12px;
+}
