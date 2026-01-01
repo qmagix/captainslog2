@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Captain’s Log</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Captain’s Log</h1>
+      <nav>
+        <button class="nav-button" data-screen="timeline">Timeline</button>
+        <button class="nav-button" data-screen="create">Create Log</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="timeline" class="screen">
+        <h2>Timeline</h2>
+        <p class="empty-state" data-empty>Nothing logged yet. Create your first entry.</p>
+        <ul class="timeline-list" data-timeline></ul>
+      </section>
+
+      <section id="create" class="screen" hidden>
+        <h2>Create Log</h2>
+        <form data-entry-form>
+          <label>
+            Type
+            <select name="type" required>
+              <option value="text">Text</option>
+              <option value="audio">Audio</option>
+              <option value="image">Image</option>
+              <option value="video">Video</option>
+            </select>
+          </label>
+
+          <label class="text-content" data-text-label>
+            Notes (optional)
+            <textarea name="textContent" rows="4" placeholder="Write a quick note..."></textarea>
+          </label>
+
+          <label class="media-input" data-media-label hidden>
+            Media file
+            <input type="file" name="media" accept="image/*,audio/*,video/*" />
+          </label>
+
+          <label>
+            Mood (optional)
+            <select name="mood">
+              <option value="">—</option>
+              <option value="🙂">🙂</option>
+              <option value="😐">😐</option>
+              <option value="😔">😔</option>
+            </select>
+          </label>
+
+          <button type="submit">Save entry</button>
+        </form>
+      </section>
+
+      <section id="view" class="screen" hidden>
+        <button class="back-button" data-back>← Back to timeline</button>
+        <div class="entry-card" data-view></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
